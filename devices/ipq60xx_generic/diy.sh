@@ -1,7 +1,7 @@
 #!/bin/bash
 shopt -s extglob
 
-rm -rf package/boot/uboot-envtools package/kernel package/firmware/ath11k* package/qca target/linux/generic target/linux/ipq60xx package/network/config/netifd feeds/kiddin9/fullconenat toolchain tools/squashfskit4
+rm -rf package/boot/uboot-envtools package/kernel package/firmware/ath11k* package/qca target/linux/generic target/linux/ipq60xx package/network/config/netifd feeds/kiddin9/fullconenat toolchain tools/squashfskit4 package/network/services/hostapd package/network/utils/iw
 svn export --force https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/package/boot/uboot-envtools package/boot/uboot-envtools
 svn export --force https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/package/firmware/ath11k-firmware package/firmware/ath11k-firmware
 svn export --force https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/package/qca package/qca
@@ -12,6 +12,8 @@ wget -P dl/ https://github.com/coolsnowwolf/openwrt-gl-ax1800/raw/master/dl/linu
 svn co https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/package/kernel package/kernel
 svn co https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/package/network/services/fullconenat feeds/kiddin9/fullconenat
 svn co https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/package/network/config/netifd package/network/config/netifd
+svn co https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/package/network/services/hostapd package/network/services/hostapd
+svn co https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/package/network/utils/iw package/network/utils/iw
 svn co https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/toolchain toolchain
 svn co https://github.com/coolsnowwolf/openwrt-gl-ax1800/trunk/tools/squashfskit4 tools/squashfskit4
 rm -rf target/linux/generic/files
